@@ -1,0 +1,50 @@
+@import url(./partials/_variables.css);
+html,
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: whitesmoke;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* main-navbar */
+
+.header .main-navbar {
+  background: whitesmoke;
+}
+
+.header .main-navbar .navbar {
+  padding: 0.5rem 15rem 0.5rem 8rem;
+}
+
+.header .main-navbar .navbar .nav-link {
+  text-transform: uppercase;
+  /* font: normal 600 1rem/2px var(--noto); */
+  padding: 1.3rem;
+  color: var(--title-color);
+  transition: background 0.2s ease-in, color 0.3s;
+}
+
+.header .main-navbar .navbar .navbar-brand {
+  padding: 0 5rem 0 3rem;
+}
+
+.header .main-navbar .navbar .navbar-nav .nav-item.active a {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header .main-navbar .navbar .navbar-nav .nav-item a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* main-navbar */
