@@ -11,8 +11,8 @@ body {
   --primary-color: rgb(8, 131, 114);
   --primary-color-light: rgb(14, 230, 230);
   --title-color: #1f1e1e;
-  --text-color: rgb(241, 241, 241);
-  --gradient-color: linear-gradient(to left, #5c575b, #bac0bc);
+  --text-color: rgb(227, 227, 227);
+  --gradient-color: linear-gradient(to left, #5a565a, #dbdbdb);
   --shadow-color: 0px 8px 21px rgba(5, 148, 112, 0.301);
   --box-shadow-color: rgba(43, 68, 71, 0.285);
   --noto: 'Noto Sans JP', sans-serif;
