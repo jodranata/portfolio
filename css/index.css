@@ -13,6 +13,13 @@ body {
 
 /* main-navbar */
 
+.logo-icon {
+  background: url('../images/Full-logo.svg');
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+}
+
 .header .main-navbar {
   background: #2e2e2e;
 }
@@ -50,14 +57,12 @@ body {
 
 .content-intro {
   background-color: rgba(51, 51, 51, 0.8);
-  /* background-image: url(../images/texture3.jpg);
-  background-blend-mode: lighten; */
 }
 .col-lg-6.col-md-12.intro-image-container {
   padding: 0;
 }
 
 .intro-image {
-  width: 90%;
+  width: 100%;
   float: right;
 }
