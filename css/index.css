@@ -20,14 +20,56 @@ body {
 .main-navbar {
   position: relative;
   width: 100%;
-  padding: 5px 0;
+  padding: 5px 0 20px 0;
+  background-color: var(--dark-color);
 }
 
-.brand-link .navbar-brand {
-  width: 100px;
+.brand-container {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.brand-link .brand-image {
+  max-width: 50px;
+  left: 50%;
+  z-index: 1;
+  margin-top: 2px;
+}
+
+.brand-container hr {
+  height: 1.5px;
+  width: 350px;
+  top: 50%;
+  margin: 0;
+  position: absolute;
+  border-style: none;
+  z-index: 0;
+}
+
+.main-navbar hr#left-hr {
+  left: calc(50% - 48px);
+  transform: translateX(-100%);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-image: linear-gradient(
+    to left,
+    rgba(248, 248, 248, 1),
+    rgba(248, 248, 248, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.main-navbar hr#right-hr {
+  left: calc(50% + 48px);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    rgba(248, 248, 248, 1),
+    rgba(248, 248, 248, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .navbar-lists {
@@ -40,41 +82,36 @@ body {
 .navbar-box {
   display: flex;
   flex-direction: row;
-  width: 25%;
-  padding: 25px 0 4.5px 0;
-  border-bottom: 2.5px solid var(--dark-text-color);
+  width: 280px;
 }
 
 .navbar-box:nth-child(1) {
-  margin-right: 45px;
+  margin-right: 50px;
   justify-content: flex-end;
-  text-align: right;
-  padding-right: 15px;
+  /* padding-right: 15px; */
 }
 
 .navbar-box:nth-child(2) {
-  margin-left: 45px;
-  justify-content: flex-start;
-  text-align: left;
-  padding-left: 15px;
+  margin-left: 50px;
 }
 
 .navbar-items {
-  padding: 0 1.1rem;
+  padding: 0 20px;
   text-transform: uppercase;
 }
 
-.navbar-items .navbar-links {
-  text-align: center;
-  color: var(--dark-text-color);
-  font: normal 500 1.2rem/2px var(--noto);
-  transition: background 0.3s step-start;
+.navbar-box:nth-child(1) .navbar-items {
+  text-align: right;
 }
 
-.navbar-items .navbar-links:hover {
+.navbar-box:nth-child(2) .navbar-items {
+  text-align: left;
+}
+
+.navbar-items .navbar-links {
+  color: var(--light-color);
+  font: normal 500 1rem/2px var(--noto);
+  transition: text 5s ease-in;
+  width: 100%;
   text-decoration: none;
-  background: var(--gradient-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
