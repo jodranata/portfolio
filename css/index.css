@@ -4,6 +4,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url(../images/concrete-wall-2.png);
   background-color: var(--bg-light);
 }
 
@@ -21,14 +22,15 @@ body {
 }
 
 .header-background {
-  width: 500px;
-  height: 500px;
+  width: 350px;
+  height: 350px;
   position: absolute;
-  background-image: url(../images/compass-emboss.png);
+  background-image: url(../images/compass-emboss2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
   left: 50%;
+  opacity: 35%;
   transform: translateX(-50%);
 }
 
