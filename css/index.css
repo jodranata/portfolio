@@ -131,3 +131,8 @@ body {
   width: 100%;
   text-decoration: none;
 }
+
+.skills img {
+  max-width: 300px;
+  opacity: 50%;
+}
