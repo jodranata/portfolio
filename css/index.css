@@ -1,3 +1,4 @@
+@import url(./partials/_variables.css);
 html,
 body {
   margin: 0;
@@ -10,27 +11,44 @@ body {
   box-sizing: border-box;
 }
 
+.main-header {
+  padding-top: 56.25%;
+  width: 100%;
+  background: url(../images/header1.jpg) no-repeat bottom;
+  background-size: cover;
+  position: relative;
+}
+
+.header-text {
+  position: absolute;
+  top: 25%;
+}
+
 .nav-container {
-  background-color: #e9e9e9;
-  height: 100vh;
-  width: 25vw;
-  position: fixed;
+  overflow-x: hidden;
+}
+
+.display {
   right: 0;
 }
 
 .navbar-lists {
+  background-color: var(--dark-color);
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  right: -25vw;
+  transition: right 0.4s ease-in;
   display: flex;
   height: 100%;
   flex-direction: column;
-  background: brown;
   align-items: center;
-  margin-top: 10%;
+  list-style: none;
+  z-index: 2;
 }
 
 .navbar-items {
-  list-style: none;
   text-decoration: none;
-  background-color: chocolate;
   width: 100%;
   line-height: 85px;
   text-align: center;
@@ -39,6 +57,16 @@ body {
 
 a.navbar-links {
   text-decoration: none;
-  color: black;
+  color: var(--light-color);
   font-size: 1.2rem;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(175, 173, 173, 0.7);
+}
+
+.brand-image img {
+  width: 80px;
+  padding: 7px;
 }
