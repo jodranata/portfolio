@@ -16,14 +16,14 @@ body {
 }
 
 .hamburger-button {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   padding: 5px 0;
   background-color: rgba(17, 17, 17, 0.5);
   border-radius: 5px;
   position: fixed;
   z-index: 99;
-  right: 10px;
+  right: 20px;
   top: 10px;
   display: flex;
   flex-direction: column;
@@ -134,7 +134,27 @@ a.navbar-links {
   position: relative;
 }
 
-.header-text {
+.header-intro {
   position: absolute;
   top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.light-text {
+  color: var(--light-color);
+}
+
+.dark-text {
+  color: var(--dark-color);
+}
+
+.medium-text {
+  font-size: 1.5rem;
+}
+
+.large-text {
+  font-size: 3.5rem;
 }
