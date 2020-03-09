@@ -3,6 +3,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -10,6 +11,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Navbar button*/
 
 .nav-container {
   overflow: hidden;
@@ -31,17 +34,12 @@ body {
   align-items: center;
   cursor: pointer;
   box-shadow: 0 0 3px 3px var(--box-shadow-color);
-  transition: 0.4s;
 }
 
 .expand .hamburger-button {
   background-color: transparent;
   box-shadow: none;
 }
-
-/* .expand .hamburger-button {
-  justify-content: center;
-} */
 
 .button-line {
   width: 70%;
@@ -82,6 +80,8 @@ body {
   transform: rotate(-45deg);
   transition-delay: 0.3s;
 }
+
+/* Navbar expand lists*/
 
 .nav-container .navbar-lists {
   background-color: var(--dark-color);
@@ -126,6 +126,8 @@ a.navbar-links {
   padding: 7px;
 }
 
+/* Introduction*/
+
 .main-header {
   padding-top: 56.25%;
   width: 100%;
@@ -157,4 +159,69 @@ a.navbar-links {
 
 .large-text {
   font-size: 3.5rem;
+}
+
+/*About*/
+
+.about {
+  background: var(--dark-color);
+  padding: 3.5rem 0;
+}
+
+.chapter-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: text-top;
+}
+
+.about-image {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.skills {
+  width: 100%;
+  background: url(../images/concrete-wall-2.png);
+  background-color: var(--light-color);
+}
+
+.skills-content {
+  max-width: 800px;
+}
+
+.skills-container {
+  text-align: center;
+}
+
+.skills-image {
+  max-width: 110px;
+  text-align: center;
+  opacity: 70%;
+}
+
+.row .col-md-6.skills-container {
+  margin-top: -3%;
+}
+
+.row .col-md-6.skills-container:nth-child(1) {
+  text-align: end;
+  padding-right: 10%;
+}
+
+.row .col-md-6.skills-container:nth-child(2) {
+  text-align: left;
+  padding-left: 10%;
 }
