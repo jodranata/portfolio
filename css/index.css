@@ -233,6 +233,7 @@ a.navbar-links {
 .project-card {
   position: relative;
   overflow: hidden;
+  margin: 8px 0px;
 }
 
 .project-details {
