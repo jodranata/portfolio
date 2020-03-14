@@ -50,15 +50,19 @@
         <div class="medium-text">
           Hello! I'm
         </div>
-        <div class="large-text">
-          Jodi Pranata
-          <span>Jo</span>
+        <div class="large-text intro-name">
+          <span id="my-nickname">Jo<span id="my-fullname"></span> </span>
         </div>
-        <div class="medium-text">
-          An aspired
-          <span>Programmer</span>
-          <span>Writer</span>
-          <span>Creator</span>
+        <div class="medium-text intro-aspiration">
+          <div>An</div>
+          <div>Aspiring</div>
+          <div class="intro-target">
+            <ul class="target-list">
+              <li class="target-item">Developer</li>
+              <li class="target-item">Creator</li>
+              <li class="target-item">Writer</li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -67,8 +71,7 @@
         <div class="about">
           <div class="container about-content light-text">
             <div class="chapter-title large-text">
-              <span>Chapter 1</span>
-              <span>About</span>
+              <span>Get to know me for a bit!</span>
             </div>
             <img
               src="./images/portrait2.png"
@@ -283,16 +286,34 @@
             tenetur ad.
           </div>
           <div class="row contact-media">
-            <div class="col-md-3 contact-link"></div>
-            <div class="col-md-3 contact-link"></div>
-            <div class="col-md-3 contact-link"></div>
-            <div class="col-md-3 contact-link"></div>
+            <div class="col-3 contact-link">
+              <a href="" class="contact-image"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+            <div class="col-3 contact-link">
+              <a href="" class="contact-image"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="col-3 contact-link">
+              <a href="" class="contact-image"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+            <div class="col-3 contact-link">
+              <a href="" class="contact-image">
+                <i class="fab fa-github"></i
+              ></a>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/jquery.vticker-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

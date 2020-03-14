@@ -14,4 +14,30 @@ $(function() {
     const isFocus = $(e.target).parents('.nav-container').length === 1;
     if (isExpand && !isFocus) collapseNav();
   });
+
+  const myName = document.getElementById('my-fullname');
+
+  const typewriter = new Typewriter(myName, {
+    loop: true,
+    delay: 80,
+    deleteSpeed: 60
+  });
+
+  typewriter
+    .typeString('di Pranata')
+    .pauseFor(3700)
+    .deleteChars(8)
+    .pauseFor(3250)
+    .deleteAll(200)
+    .pauseFor(3850)
+    .start();
+
+  $('.intro-target').vTicker({
+    speed: 1200,
+    pause: 4500,
+    animation: 'fade',
+    mousePause: false,
+    showItems: 1,
+    direction: 'down'
+  });
 });

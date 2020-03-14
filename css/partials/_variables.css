@@ -19,3 +19,19 @@ body {
   --box-shadow-color: rgba(78, 115, 119, 0.285);
   --noto: 'Noto Sans JP', sans-serif;
 }
+
+.light-text {
+  color: var(--light-color);
+}
+
+.dark-text {
+  color: var(--dark-color);
+}
+
+.medium-text {
+  font-size: 1.5rem;
+}
+
+.large-text {
+  font-size: 3.5rem;
+}
