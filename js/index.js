@@ -39,4 +39,6 @@ $(function() {
     showItems: 1,
     direction: 'down'
   });
+
+  $('[data-toggle="tooltip"]').tooltip();
 });
