@@ -19,23 +19,22 @@ $(function() {
 
   const typewriter = new Typewriter(myName, {
     loop: true,
-    delay: 80,
-    deleteSpeed: 60
+    delay: 50,
+    deleteSpeed: 62.5
   });
 
   typewriter
     .typeString('di Pranata')
-    .pauseFor(3700)
+    .pauseFor(3850)
     .deleteChars(8)
     .pauseFor(3250)
-    .deleteAll(200)
-    .pauseFor(3850)
+    .deleteAll(300)
+    .pauseFor(3900)
     .start();
 
   $('.intro-target').vTicker({
     speed: 1200,
     pause: 4500,
-    animation: 'fade',
     mousePause: false,
     showItems: 1,
     direction: 'down'

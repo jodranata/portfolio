@@ -267,12 +267,14 @@ a.navbar-links {
   padding: 12px 10px;
 }
 .contact-image i {
-  font-size: 3rem;
+  font-size: 3vw;
   color: var(--dark-color);
 }
 
 .contact-media {
-  margin: 0;
+  margin: 0 auto;
+  padding: 12px 8px;
+  max-width: 70%;
 }
 
 .contact-link {
