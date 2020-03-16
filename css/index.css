@@ -4,9 +4,12 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: var(--libre);
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,7 +26,7 @@ body {
   width: 35px;
   height: 35px;
   padding: 5px 0;
-  background-color: rgba(17, 17, 17, 0.5);
+  background-color: transparent;
   border-radius: 5px;
   position: fixed;
   z-index: 99;
@@ -34,7 +37,6 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 0 3px 3px var(--box-shadow-color);
 }
 
 .expand .hamburger-button {
@@ -43,43 +45,50 @@ body {
 }
 
 .button-line {
-  width: 70%;
+  width: 90%;
   position: absolute;
-  height: 3px;
-  background-color: whitesmoke;
+  height: 4.5px;
+  background-color: var(--light-color);
   border-radius: 5px;
+  box-shadow: 0 0 0 0.8px var(--dark-color);
 }
 
 .button-line:nth-child(1) {
-  transform: translateY(-8px);
-  transition: all 0.3s ease-in-out 0.3s;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out 0.35s, background 0ms ease-in-out 0.35s,
+    opacity 0.3s ease-in-out 0.35s;
 }
 
 .button-line:nth-child(2),
 .button-line:nth-child(3) {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0ms ease-in-out 0.2s;
 }
 
 .button-line:nth-child(4) {
-  transform: translateY(8px);
-  transition: all 0.3s ease-in-out 0.3s;
+  transform: translateY(10px);
+  transition: transform 0.3s ease-in-out 0.35s, background 0ms ease-in-out 0.35s,
+    opacity 0.3s ease-in-out 0.35s;
 }
 
 .expand .button-line:nth-child(1),
 .expand .button-line:nth-child(4) {
   transform: translateY(0);
   background: transparent;
-  transition: transform 0.3s ease-in-out, background 0ms ease-in-out 0.3s;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, background 0ms ease-in-out 0.3s,
+    opacity 0ms ease-in-out 0.3s;
 }
 
 .expand .button-line:nth-child(2) {
   transform: rotate(45deg);
   transition-delay: 0.3s;
+  box-shadow: none;
 }
 
 .expand .button-line:nth-child(3) {
   transform: rotate(-45deg);
   transition-delay: 0.3s;
+  box-shadow: none;
 }
 
 /* Navbar expand lists*/
@@ -90,7 +99,7 @@ body {
   width: 20vw;
   position: fixed;
   right: -20vw;
-  transition: right 0.4s;
+  transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -146,6 +155,10 @@ a.navbar-links {
   text-transform: capitalize;
 }
 
+.header-intro > * {
+  margin: 8px 0;
+}
+
 /* intro- news ticker*/
 .intro-aspiration {
   display: inline-flex;
@@ -170,7 +183,7 @@ a.navbar-links {
 
 .about {
   background: var(--dark-color);
-  padding: 3.5rem 0;
+  min-height: 85vh;
 }
 
 .chapter-title {
@@ -179,10 +192,14 @@ a.navbar-links {
   justify-content: center;
   align-items: center;
   vertical-align: text-top;
+  padding: 35px 0;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .about-image {
-  max-width: 150px;
+  min-width: 150px;
+  max-width: 25%;
   border-radius: 50%;
 }
 
@@ -203,6 +220,7 @@ a.navbar-links {
   width: 100%;
   background: url(../images/concrete-wall-2.png);
   background-color: var(--light-color);
+  height: 80vh;
 }
 
 .skills-content {
@@ -210,6 +228,10 @@ a.navbar-links {
 }
 
 .skills-container {
+  padding: 20px 0;
+}
+
+.skills-items {
   text-align: center;
 }
 
@@ -219,21 +241,25 @@ a.navbar-links {
   opacity: 70%;
 }
 
-.row .col-md-6.skills-container {
+.row .col-md-6.skills-items {
   margin-top: -3%;
 }
 
-.row .col-md-6.skills-container:nth-child(1) {
+.row .col-md-6.skills-items:nth-child(1) {
   text-align: end;
   padding-right: 10%;
 }
 
-.row .col-md-6.skills-container:nth-child(2) {
-  text-align: left;
+.row .col-md-6.skills-items:nth-child(2) {
+  text-align: start;
   padding-left: 10%;
 }
 
 /* Projects */
+
+.projects {
+  min-height: 90vh;
+}
 
 .project-card {
   position: relative;
@@ -254,7 +280,7 @@ a.navbar-links {
 }
 
 .project-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 
 .project-card:hover > .project-details {
@@ -264,7 +290,11 @@ a.navbar-links {
 /* Contact */
 
 .contact {
-  padding: 12px 10px;
+  background-color: var(--dark-color);
+}
+
+.contact-invitation {
+  text-align: center;
 }
 .contact-image i {
   font-size: 3vw;

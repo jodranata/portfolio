@@ -14,11 +14,13 @@ body {
   --bg-light: rgb(248, 248, 248);
   --title-color: #1f1e1e;
   --dark-color: rgb(51, 51, 51);
+  --gray-color: rgb(77, 77, 77);
   --light-color: rgb(240, 240, 240);
   --gradient-color: linear-gradient(314deg, #bebebe, #494649);
   --shadow-color: 0px 8px 21px rgba(5, 148, 112, 0.301);
   --box-shadow-color: rgba(78, 115, 119, 0.285);
-  --noto: 'Noto Sans JP', sans-serif;
+  --titilium: 'Titillium Web', sans-serif;
+  --libre: 'Libre Franklin', sans-serif;
 }
 
 .light-text {
@@ -29,10 +31,22 @@ body {
   color: var(--dark-color);
 }
 
-.medium-text {
+.xs-text {
+  font-size: 1rem;
+}
+
+.sm-text {
   font-size: 1.5rem;
 }
 
-.large-text {
+.md-text {
+  font-size: 2rem;
+}
+
+.lg-text {
+  font-size: 3rem;
+}
+
+.xl-text {
   font-size: 3.5rem;
 }
