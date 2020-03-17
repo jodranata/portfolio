@@ -14,7 +14,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-/**/
+/* */
 
 /* Navbar button*/
 
@@ -53,10 +53,10 @@ body {
   box-shadow: 0 0 0 0.8px var(--dark-color);
 }
 
+/* when collapse */
 .button-line:nth-child(1) {
   transform: translateY(-10px);
-  transition: transform 0.3s ease-in-out 0.35s, background 0ms ease-in-out 0.35s,
-    opacity 0.3s ease-in-out 0.35s;
+  transition: transform 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
 }
 
 .button-line:nth-child(2),
@@ -66,17 +66,15 @@ body {
 
 .button-line:nth-child(4) {
   transform: translateY(10px);
-  transition: transform 0.3s ease-in-out 0.35s, background 0ms ease-in-out 0.35s,
-    opacity 0.3s ease-in-out 0.35s;
+  transition: transform 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
 }
 
+/* when expand */
 .expand .button-line:nth-child(1),
 .expand .button-line:nth-child(4) {
   transform: translateY(0);
-  background: transparent;
   opacity: 0;
-  transition: transform 0.3s ease-in-out, background 0ms ease-in-out 0.3s,
-    opacity 0ms ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out, opacity 0ms ease-in-out 0.3s;
 }
 
 .expand .button-line:nth-child(2) {
@@ -220,7 +218,7 @@ a.navbar-links {
   width: 100%;
   background: url(../images/concrete-wall-2.png);
   background-color: var(--light-color);
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .skills-content {
@@ -298,7 +296,7 @@ a.navbar-links {
 }
 .contact-image i {
   font-size: 3vw;
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .contact-media {

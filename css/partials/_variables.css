@@ -50,3 +50,69 @@ body {
 .xl-text {
   font-size: 3.5rem;
 }
+
+@media only screen and (max-width: 992px) {
+  .xs-text {
+    font-size: 1rem;
+  }
+
+  .sm-text {
+    font-size: 1.4rem;
+  }
+
+  .md-text {
+    font-size: 1.7rem;
+  }
+
+  .lg-text {
+    font-size: 2.5rem;
+  }
+
+  .xl-text {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .xs-text {
+    font-size: 1rem;
+  }
+
+  .sm-text {
+    font-size: 1.2rem;
+  }
+
+  .md-text {
+    font-size: 1.5rem;
+  }
+
+  .lg-text {
+    font-size: 2rem;
+  }
+
+  .xl-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .xs-text {
+    font-size: 0.7rem;
+  }
+
+  .sm-text {
+    font-size: 0.85rem;
+  }
+
+  .md-text {
+    font-size: 1.2rem;
+  }
+
+  .lg-text {
+    font-size: 1.7rem;
+  }
+
+  .xl-text {
+    font-size: 2rem;
+  }
+}
