@@ -49,7 +49,7 @@ body {
   position: absolute;
   height: 4.5px;
   background-color: var(--light-color);
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 0 0.8px var(--dark-color);
 }
 
@@ -151,6 +151,10 @@ a.navbar-links {
   transform: translateX(-50%);
   text-align: center;
   text-transform: capitalize;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header-intro > * {
@@ -210,6 +214,7 @@ a.navbar-links {
 
 .about-text {
   text-align: center;
+  padding: 24px;
 }
 
 /* skills */
@@ -219,6 +224,7 @@ a.navbar-links {
   background: url(../images/concrete-wall-2.png);
   background-color: var(--light-color);
   min-height: 80vh;
+  padding-bottom: 20px;
 }
 
 .skills-content {
@@ -226,7 +232,7 @@ a.navbar-links {
 }
 
 .skills-container {
-  padding: 20px 0;
+  padding: 8px 0;
 }
 
 .skills-items {
@@ -239,16 +245,16 @@ a.navbar-links {
   opacity: 70%;
 }
 
-.row .col-md-6.skills-items {
+.skills-container > .row:nth-child(even) {
   margin-top: -3%;
 }
 
-.row .col-md-6.skills-items:nth-child(1) {
+.skills-container > .row:nth-child(even) > .skills-items:nth-child(1) {
   text-align: end;
   padding-right: 10%;
 }
 
-.row .col-md-6.skills-items:nth-child(2) {
+.skills-container > .row:nth-child(even) > .skills-items:nth-child(2) {
   text-align: start;
   padding-left: 10%;
 }
@@ -256,13 +262,18 @@ a.navbar-links {
 /* Projects */
 
 .projects {
-  min-height: 90vh;
+  min-height: 100vh;
+  background-color: var(--light-color);
+}
+
+.projects-row {
+  padding: 25px 0;
 }
 
 .project-card {
   position: relative;
   overflow: hidden;
-  margin: 8px 0px;
+  margin: 24px 0px;
 }
 
 .project-details {
@@ -278,24 +289,30 @@ a.navbar-links {
 }
 
 .project-title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+}
+
+.project-overview {
+  font-size: 0.95rem;
 }
 
 .project-card:hover > .project-details {
-  top: 20%;
+  top: 10%;
 }
 
 /* Contact */
 
 .contact {
   background-color: var(--dark-color);
+  padding-bottom: 30px;
 }
 
 .contact-invitation {
   text-align: center;
 }
+
 .contact-image i {
-  font-size: 3vw;
+  font-size: 45px;
   color: var(--light-color);
 }
 
@@ -307,4 +324,109 @@ a.navbar-links {
 
 .contact-link {
   text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .button-line {
+    width: 80%;
+  }
+  .header-intro {
+    top: 21%;
+  }
+
+  .contact-image i {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* navbar */
+  .button-line {
+    width: 70%;
+    height: 3.5px;
+  }
+  /* header */
+  .header-intro > * {
+    margin: 5px 0;
+  }
+  .intro-aspiration * {
+    width: 100px;
+  }
+
+  .chapter-title {
+    padding: 25px 0;
+  }
+
+  /* skills */
+  .skills-container > .row:nth-child(odd) > .skills-items:nth-child(3) {
+    margin-top: -4.5%;
+  }
+  .skills-container > .row:nth-child(even) {
+    margin-top: -4.5%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .skills-container > .row:nth-child(even) > .skills-items:nth-child(1) {
+    text-align: center;
+    padding: 0;
+  }
+
+  .skills-container > .row:nth-child(even) > .skills-items:nth-child(2) {
+    text-align: center;
+    padding: 0;
+  }
+  .contact-image i {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Navbar */
+  .button-line {
+    width: 60%;
+    height: 3px;
+  }
+
+  .button-line:nth-child(1) {
+    transform: translateY(-7px);
+  }
+
+  .button-line:nth-child(4) {
+    transform: translateY(7px);
+  }
+
+  /* header */
+  .header-intro > * {
+    margin: 0;
+  }
+  .intro-aspiration * {
+    width: 80px;
+  }
+  .chapter-title {
+    padding: 20px 0 5px 0;
+  }
+  /* skills */
+  .skills-container > .row:nth-child(odd) > .skills-items:nth-child(3) {
+    margin: 0;
+  }
+  .skills-container > .row:nth-child(even) {
+    margin: 0%;
+  }
+
+  .skills-image {
+    width: 85px;
+    margin: 8px 0;
+  }
+  /* project */
+  .project-title {
+    font-size: 0.9rem;
+  }
+
+  .project-overview {
+    font-size: 0.7rem;
+  }
+  .contact-image i {
+    font-size: 20px;
+  }
 }
