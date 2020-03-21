@@ -94,6 +94,7 @@ body {
 .nav-container .navbar-lists {
   background-color: var(--dark-color);
   height: 100vh;
+  min-width: 85px;
   width: 20vw;
   position: fixed;
   right: -20vw;
@@ -131,6 +132,10 @@ body {
 .navbar-items:nth-child(5) .contact-image i {
   font-size: 1.25rem;
   color: var(--light-color);
+}
+
+.navbar-items:nth-child(5) .contact-media {
+  min-width: 138px;
 }
 
 a.navbar-links {
@@ -214,7 +219,7 @@ a.navbar-links {
   align-items: center;
   vertical-align: text-top;
   padding: 35px 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 700;
 }
 
@@ -354,6 +359,10 @@ a.navbar-links {
     width: 80%;
   }
 
+  .nav-container .navbar-lists {
+    width: 18vw;
+  }
+
   .brand-image {
     width: 60px;
     align-self: flex-start;
@@ -366,6 +375,10 @@ a.navbar-links {
 
   .navbar-items {
     line-height: 65px;
+  }
+
+  .navbar-items:nth-child(5) .contact-media {
+    min-width: 0;
   }
 
   /* header */
@@ -457,10 +470,6 @@ a.navbar-links {
   a.navbar-links {
     font-size: 0.7rem;
   }
-
-  /* .navbar-items {
-    line-height: 55px;
-  } */
 
   .brand-image {
     width: 38px;
