@@ -304,7 +304,7 @@ a.navbar-links {
   position: absolute;
   z-index: 1;
   top: 100%;
-  background-color: rgba(0, 0, 0, 0.72);
+  background-color: rgba(54, 54, 54, 0.863);
   color: var(--light-color);
   width: calc(100% - 30px);
   height: 100%;
@@ -321,7 +321,7 @@ a.navbar-links {
 }
 
 .project-card:hover > .project-details {
-  top: 10%;
+  top: 15%;
 }
 
 /* Contact */
