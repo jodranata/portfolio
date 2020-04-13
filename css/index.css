@@ -291,25 +291,40 @@ a.navbar-links {
 }
 
 .projects-row {
-  padding: 25px 0;
+  padding: 5px 0 20px 0;
 }
 
 .project-card {
   position: relative;
-  overflow: hidden;
-  margin: 24px 0px;
+  margin: 36px 0px;
+}
+
+.project-container {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 30px);
+  height: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-details {
   position: absolute;
-  z-index: 1;
-  top: 100%;
-  background-color: rgba(54, 54, 54, 0.863);
+  background-color: rgba(133, 56, 56, 0.863);
   color: var(--light-color);
-  width: calc(100% - 30px);
-  height: 100%;
-  transition: top 0.3s ease-in-out;
+  width: 95%;
+  height: 90%;
   padding: 7px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.35s ease-in-out, transform 0.25s ease-in-out;
+  cursor: default;
 }
 
 .project-title {
@@ -318,10 +333,42 @@ a.navbar-links {
 
 .project-overview {
   font-size: 0.95rem;
+  height: 25%;
 }
 
-.project-card:hover > .project-details {
-  top: 15%;
+.project-container:hover > .project-details {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.project-tools {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  transform: translateY(100%);
+  width: calc(100% - 30px);
+}
+
+.project-tools span {
+  background-color: var(--dark-color);
+  border-radius: 10px;
+  padding: 9px 12px;
+  margin: 1px 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.project-site {
+  padding: 42px 10px;
+  text-align: center;
+}
+
+.project-site a {
+  color: var(--dark-color);
 }
 
 /* Contact */
@@ -342,12 +389,18 @@ a.navbar-links {
 
 .contact-media {
   margin: 0 auto;
-  padding: 12px 8px;
+  padding: 5px 8px;
   max-width: 70%;
 }
 
 .contact-link {
   text-align: center;
+}
+
+@media only screen and (max-width: 1278px) and (min-width: 1200px) {
+  .project-tools span {
+    font-size: 0.7rem;
+  }
 }
 
 @media only screen and (max-width: 992px) {
